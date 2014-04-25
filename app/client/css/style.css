@@ -1,0 +1,269 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	width: 855px;
+	font-size: 100%;
+	margin: auto;
+	background-color: black;
+	line-height: 1;
+}
+
+
+header {
+	overflow: auto;
+	border-bottom: 1px solid black;
+	height: 380px;
+
+}
+
+header p{
+	float: right;
+	width: 570px;
+	font-style: italic;
+	overflow: auto;
+	margin-top: 10px;
+}
+
+a#deleteMessage2 {
+	text-decoration:none;
+}
+
+
+.mainMessageContent {
+	font-family: 'Roboto';
+	color: #E8E8E8;
+	font-weight:normal;
+	background-color: black;
+	font-size: 125%;
+	height: 384px;
+	line-height:1;
+	//margin-top: 70px;
+	border-bottom: 1px solid black;
+
+}
+.mainMessageContent table{
+	margin-top: 20px;
+}
+
+.mainMessageContent td{
+	width:30%;
+}
+
+.deleteMessage2 {
+	cursor: pointer;
+	width: 20px;
+}
+
+.deleteMessage2:hover {
+	background-color: white;
+	color: black;
+	cursor: pointer;
+	width: 20px;
+
+}
+
+.mainMessageContent td.deleteMessage{
+	width:10%;
+}
+
+.mainMessageContent p{
+	color: white;
+	font-size: 200%;
+	margin-top: 50px;
+
+}
+
+.whatup {
+	font-family: 'Roboto';
+	color: white;
+	font-weight:bold;
+	background-color: black;
+	font-size: 500%;
+	height: 200px;
+	line-height:1;
+	margin-top: 50px;
+}
+
+.message {
+	font-family: 'Roboto';
+	color: #E8E8E8;
+	font-weight:normal;
+	background-color: black;
+	font-size: 200%;
+	height: 50px;
+	line-height:1;
+	margin-top: 70px;
+}
+
+.inputSize {
+	width: 600px;
+	height: 50px;
+	font-size: 24px;
+	border-radius: 5px 0px 5px 0;
+}
+
+.displayHome {
+	font-family: 'Roboto';
+	color: white;
+	background-color: black;
+	display: inline;
+	float: left;
+	text-align:center;
+	text-decoration:none;
+	font-size: 300%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+	border-radius: 5px 5px 5px 5px;
+	height: 50px;
+	width: 55px;
+}
+
+.displayHome:hover {
+	font-family: 'Roboto';
+	color: black;
+	text-align:center;
+	background-color: white;
+	text-decoration:none;
+	border-radius: 5px 5px 5px 5px;
+	height: 50px;
+	width: 55px;
+}
+
+.displayMessages {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	margin-left: 5px;
+	height: 50px;
+	width: 85px;
+	background-image: url('../images/envelope.jpg');
+	background-size: 100% 100%;
+}
+
+.displayMessages:hover {
+	font-family: 'Roboto';
+	color: black;
+	text-align:center;
+	display: block;
+	margin-left: 5px;
+	height: 50px;
+	width: 85px;
+	background-image: url('../images/envelope-hover.jpg');
+	background-size: 100% 100%;
+}
+
+.displayHelp {
+	font-family: 'Roboto';
+	color: white;
+	background-color: black;
+	display: inline;
+	float: left;
+	text-align:center;
+	text-decoration:none;
+	font-size: 300%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+	border-radius: 5px 5px 5px 5px;
+	height: 50px;
+	width: 55px;
+}
+
+.displayHelp:hover {
+	font-family: 'Roboto';
+	color: black;
+	text-align:center;
+	background-color: white;
+	text-decoration:none;
+	border-radius: 5px 5px 5px 5px;
+	height: 50px;
+	width: 55px;
+}
+
+
+
+button{
+	height: 50px;
+	width: 30px;
+	line-height:1;
+	margin-left: 2px;
+	font-size: 25px;
+	border-radius: 5px 5px 5px 5px;
+
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #006699;
+	color: white
+}
+
+main {
+	margin-top: 20px;
+	overflow: auto;
+	border-bottom: 1px solid black;
+}
+
+.tabs a span {
+	display: inline-block;
+	border-radius: 5px 5px 0 0;
+	width: 100px;
+	margin-right: 10px;
+	text-align: center;
+	background: #ddd;
+	padding: 5px;
+}
+
+.tabs a span.active {
+	background: #eee;
+}
+
+.content {
+	background: #eee;
+}
+
+.content ul li {
+	display: inline-block;
+	padding: 2px;
+	background-color: lavender;
+	border-width: 1px;
+	width: 845px;
+	//margin-right: 5px;
+	margin-left: 5px;
+	//border-radius: 5px;
+}
+
+.content span.comment {
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 10px;
+}
+
+.content ul li:nth-child(even) {
+	background: gainsboro;
+}
+
+.content ul li:nth-child(odd) {
+	background: #eee;
+}
+
+
+
+
+footer p{
+	float: left;
+	font-size: smaller;
+	margin-top: 10px;
+	clear: both;
+	color: white;
+}
+
+
