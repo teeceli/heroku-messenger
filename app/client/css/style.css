@@ -28,6 +28,49 @@ header p{
 	margin-top: 10px;
 }
 
+
+table {
+    border: 1px solid black;
+    //padding: 10px; 10px;
+    margin-bottom: 10px;
+     color: white;
+}
+
+th {
+    background-color: black;
+     color: white;
+}
+/*
+th, td {
+    border: 1px solid black;
+    //padding: 5px 5px;
+     color: white;
+}
+*/
+.prev, .next {
+    width: 50px;
+     color: white;
+    text-align: center;
+    margin-right: 10px;
+    user-select: none;
+   -o-user-select:none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+}
+
+.prev, .next {
+    border: 1px solid white;
+    cursor: pointer;
+     color: white;
+}
+
+.prev.disabled, .next.disabled {
+    border: 1px solid white;
+    cursor: default;
+    color: white;
+}
+
 a#deleteMessage2 {
 	text-decoration:none;
 	color: white;
@@ -61,8 +104,16 @@ a#deleteMessage2:hover {
 }
 
 .mainMessageContent td{
+	    border: 1px solid white;
+
 	width:50%;
 	padding: 10px;
+}
+
+.mainMessageContent tr{
+	color: white;
+	background-color: black;
+	cursor: pointer;
 }
 
 .mainMessageContent tr:hover{
@@ -75,9 +126,21 @@ a#deleteMessage2:hover {
 	width:10%;
 }
 
-.mainMessageContent p{
+.mainMessageContent span{
+	color: #006699;
+	font-size: 140%;
+	margin-top: 50px;
+}
+
+.mainMessageContent span .clickMessage{
 	color: white;
-	font-size: 120%;
+	display: inline;
+	font-size: 60%;
+	margin-top: 50px;
+	font-style: italic;
+}
+
+.topMarginPlaceHolder {
 	margin-top: 50px;
 }
 
@@ -92,9 +155,159 @@ a#deleteMessage2:hover {
 	border-bottom: 1px solid black;
 }
 
+.imageBar {
+	color:white;
+	margin-top: 50px;
+}
+
+
+.nodeJSImage {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	margin-left: 35px;
+	height: 60px;
+	width: 70px;
+	opacity:0.2;
+	background-image: url('../images/nodejs.jpg');
+	background-size: 100% 100%;
+}
+
+.nodeJSImage:hover {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	margin-left: 35px;
+	height: 60px;
+	width: 70px;
+	opacity:1.0;
+	cursor: pointer;
+	background-image: url('../images/nodejs.jpg');
+	background-size: 100% 100%;
+}
+.mongoHQImage {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	margin-left: 35px;
+	height: 60px;
+	width: 70px;
+	opacity:0.2;
+	background-image: url('../images/mongohq.jpg');
+	background-size: 100% 100%;
+}
+
+.mongoHQImage:hover {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	margin-left: 35px;
+	height: 60px;
+	width: 70px;
+	opacity:1.0;
+	cursor: pointer;
+	background-image: url('../images/mongohq.jpg');
+	background-size: 100% 100%;
+}
+
+.mongoImage {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	margin-left: 35px;
+	height: 60px;
+	width: 70px;
+	opacity:0.2;
+	background-image: url('../images/mongodb.jpg');
+	background-size: 100% 100%;
+}
+
+.mongoImage:hover {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	margin-left: 35px;
+	height: 60px;
+	width: 70px;
+	opacity:1.0;
+	cursor: pointer;
+	background-image: url('../images/mongodb.jpg');
+	background-size: 100% 100%;
+}
+
+.gitImage {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	margin-left: 35px;
+	height: 60px;
+	width: 70px;
+	opacity:0.2;
+	background-image: url('../images/github.jpg');
+	background-size: 100% 100%;
+}
+
+.gitImage:hover {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	margin-left: 35px;
+	height: 60px;
+	width: 70px;
+	opacity:1.0;
+	cursor: pointer;
+	background-image: url('../images/github.jpg');
+	background-size: 100% 100%;
+}
+.herokuImage {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	margin-left: 35px;
+	height: 60px;
+	width: 70px;
+	opacity:0.2;
+	background-image: url('../images/heroku.jpg');
+	background-size: 100% 100%;
+}
+
+.herokuImage:hover {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	margin-left: 35px;
+	height: 60px;
+	width: 70px;
+	opacity:1.0;
+	cursor: pointer;
+	background-image: url('../images/heroku.jpg');
+	background-size: 100% 100%;
+}
+
 
 .whatup {
 	font-family: 'Roboto';
+	//color: #006699;
 	color: white;
 	font-weight:bold;
 	background-color: black;
@@ -106,7 +319,8 @@ a#deleteMessage2:hover {
 
 .message {
 	font-family: 'Roboto';
-	color: #E8E8E8;
+	color: #006699;
+	//color: #E8E8E8;
 	font-weight:normal;
 	background-color: black;
 	font-size: 200%;
