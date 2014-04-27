@@ -30,40 +30,45 @@ header p{
 
 a#deleteMessage2 {
 	text-decoration:none;
+	color: white;
+	font-size: 125%;
+	width: 15px;
+
 }
 
+a#deleteMessage2:hover {
+	text-decoration:none;
+	width: 15px;
+	background-color: #E8E8E8;
+	color: black;
+	cursor: pointer;
+}
 
 .mainMessageContent {
 	font-family: 'Roboto';
 	color: #E8E8E8;
 	font-weight:normal;
 	background-color: black;
-	font-size: 125%;
+	font-size: 110%;
 	height: 384px;
 	line-height:1;
-	//margin-top: 70px;
 	border-bottom: 1px solid black;
 
 }
+
 .mainMessageContent table{
 	margin-top: 20px;
 }
 
 .mainMessageContent td{
-	width:30%;
+	width:50%;
+	padding: 10px;
 }
 
-.deleteMessage2 {
-	cursor: pointer;
-	width: 20px;
-}
-
-.deleteMessage2:hover {
-	background-color: white;
+.mainMessageContent tr:hover{
 	color: black;
+	background-color: white;
 	cursor: pointer;
-	width: 20px;
-
 }
 
 .mainMessageContent td.deleteMessage{
@@ -72,10 +77,21 @@ a#deleteMessage2 {
 
 .mainMessageContent p{
 	color: white;
-	font-size: 200%;
+	font-size: 120%;
 	margin-top: 50px;
-
 }
+
+.mainHelpContent {
+	font-family: 'Roboto';
+	color: white;
+	font-weight:normal;
+	background-color: black;
+	font-size: 100%;
+	height: 384px;
+	line-height:1;
+	border-bottom: 1px solid black;
+}
+
 
 .whatup {
 	font-family: 'Roboto';
@@ -99,7 +115,7 @@ a#deleteMessage2 {
 	margin-top: 70px;
 }
 
-.inputSize {
+.inputClass {
 	width: 600px;
 	height: 50px;
 	font-size: 24px;

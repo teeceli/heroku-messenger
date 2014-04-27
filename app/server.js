@@ -3,6 +3,8 @@ var express = require("express");
 var logfmt = require("logfmt");
 var	http = require("http");
 var	mongoose = require("mongoose");
+var ObjectId = require("mongoose").ObjectID;
+
 //var	mongodb = require("mongodb");
 
 // dev
@@ -70,10 +72,6 @@ app.get("/messages.json", function (req, res) {
 app.post("/sendMessage", function (req, res) {
 	var date = new Date();
 	var newMessage = new Message({"message":req.body.message, "messageDate":date.toISOString()});
-				
-	console.log(req.body);
-		console.log(new Date().getTime());
-
 
 	newMessage.save(function (err, result) {
 	if (err !== null) {
@@ -94,6 +92,22 @@ app.post("/sendMessage", function (req, res) {
 	}
 
 	});
+});
+
+app.post("/deleteMessage", function (req, res) {
+
+		var dateToDelete = req.body.messageDate;
+		console.log("dateToDelete: " + dateToDelete);
+		// our client expects *all* of the todo items to be returned,
+		// so we do an additional request to maintain compatibility
+		Message.remove({"messageDate": dateToDelete}, function (err, result) {
+			if (err !== null) {
+				// the element did not get saved!
+				res.send("ERROR");
+			}
+			res.json(result);
+		});
+
 });
 
 
