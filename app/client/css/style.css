@@ -516,10 +516,11 @@ a#deleteMessage2:hover {
 
 .displayMessages:hover {
 	font-family: 'Roboto';
-	color: black;
+	color: white;
 	text-align:center;
 	display: block;
 	margin-left: 5px;
+	float: left;
 	height: 50px;
 	width: 85px;
 	background-image: url('../images/envelope-hover.jpg');

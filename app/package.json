@@ -2,9 +2,9 @@
   "name": "sp_example",
   "description": "My first Cloud Foundry app!",
   "dependencies": {
-		"express": "3.x",
-		"mongoose": "3.6.x",
-    "logfmt": "~1.1.2"
+    "express": "3.x",
+    "mongoose": "3.6.x",
+    "logfmt": "~1.1.2",
+    "mongodb": "~1.4.2"
   }
 }
-
