@@ -33,11 +33,30 @@ table {
     border: 1px solid black;
     //padding: 10px; 10px;
     margin-bottom: 10px;
+   // height: 500px;
+   // height: 80%;
      color: white;
+}
+
+.tableDiv {
+	//height: 400px;
+	    border: 1px solid white;
+
+}
+
+.prevDiv {
+	margin-top: 40px;
+	    border: 1px solid white;
+
 }
 
 th {
     background-color: black;
+     color: white;
+}
+
+tr {
+    border: 1px solid white;
      color: white;
 }
 /*
@@ -47,11 +66,85 @@ th, td {
      color: white;
 }
 */
+.spacer {
+	height: 10px;
+	display: block;
+		background-size: 100% 100%;
+
+}
+
+.prev {
+	margin-left: 80%;
+	//	float: right;
+
+	//margin-top: 100%;
+	//margin-bottom: 0%;
+	text-align: center;
+	background-image: url('../images/left-arrow.jpg');
+	background-size: 100% 100%;
+	border-radius: 5px 5px 5px 5px;
+		display: inline-block;
+		width: 20px;
+		height: 30px;
+
+}
+
+.prev:hover {
+	//	float: right;
+
+	margin-left: 80%;
+	//margin-top: 100%;
+	//margin-bottom: 0%;
+	text-align: center;
+	background-image: url('../images/left-arrow-hover.jpg');
+	background-size: 100% 100%;
+	border-radius: 5px 5px 5px 5px;
+
+		display: inline-block;
+		width: 20px;
+		height: 30px;
+
+}
+
+.next {
+	//margin-right: 20%;
+	//margin-top: 100%;
+	//margin-bottom: 0%;
+		text-align: center;
+	//		float: right;
+
+
+	border-radius: 5px 5px 5px 5px;
+
+		background-image: url('../images/right-arrow.jpg');
+	background-size: 100% 100%;
+		display: inline-block;
+		width: 20px;
+		height: 30px;
+
+}
+
+.next:hover {
+	//margin-right: 20%;
+	//margin-top: 100%;
+	//margin-bottom: 0%;
+		text-align: center;
+	border-radius: 5px 5px 5px 5px;
+	//	float: right;
+
+		background-image: url('../images/right-arrow-hover.jpg');
+	background-size: 100% 100%;
+		display: inline-block;
+		width: 20px;
+		height: 30px;
+
+}
 .prev, .next {
-    width: 50px;
+   // width: 50px;
      color: white;
     text-align: center;
     margin-right: 10px;
+    //margin-top: 10px;
     user-select: none;
    -o-user-select:none;
    -moz-user-select: none;
@@ -60,13 +153,13 @@ th, td {
 }
 
 .prev, .next {
-    border: 1px solid white;
+    border: 0px solid black;
     cursor: pointer;
-     color: white;
+    color: white;
 }
 
 .prev.disabled, .next.disabled {
-    border: 1px solid white;
+    border: 0px solid white;
     cursor: default;
     color: white;
 }
@@ -155,6 +248,20 @@ a#deleteMessage2:hover {
 	border-bottom: 1px solid black;
 }
 
+.mainHelpContent h1{
+	//margin-top: 60px;
+	color: #006699;
+}
+
+.mainHelpContent a{
+	//margin-top: 60px;
+	color: #006699;
+}
+
+.mainHelpContent p{
+	margin-top: 30px;
+}
+
 .imageBar {
 	color:white;
 	margin-top: 50px;
@@ -167,10 +274,10 @@ a#deleteMessage2:hover {
 	display: block;
 	text-align:center;
 	float: left;
-	margin-left: 35px;
+	margin-left: 40px;
 	height: 60px;
 	width: 70px;
-	opacity:0.2;
+	opacity:0.4;
 	background-image: url('../images/nodejs.jpg');
 	background-size: 100% 100%;
 }
@@ -181,7 +288,7 @@ a#deleteMessage2:hover {
 	display: block;
 	text-align:center;
 	float: left;
-	margin-left: 35px;
+	margin-left: 40px;
 	height: 60px;
 	width: 70px;
 	opacity:1.0;
@@ -189,16 +296,46 @@ a#deleteMessage2:hover {
 	background-image: url('../images/nodejs.jpg');
 	background-size: 100% 100%;
 }
+
+.arduinoImage {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	//margin-left: 40px;
+	height: 60px;
+	width: 70px;
+	opacity:0.4;
+	background-image: url('../images/arduino.jpg');
+	background-size: 100% 100%;
+}
+
+.arduinoImage:hover {
+	font-family: 'Roboto';
+	color: white;
+	display: block;
+	text-align:center;
+	float: left;
+	//margin-left: 40px;
+	height: 60px;
+	width: 70px;
+	opacity:1.0;
+	cursor: pointer;
+	background-image: url('../images/arduino.jpg');
+	background-size: 100% 100%;
+}
+
 .mongoHQImage {
 	font-family: 'Roboto';
 	color: white;
 	display: block;
 	text-align:center;
 	float: left;
-	margin-left: 35px;
+	margin-left: 0px;
 	height: 60px;
 	width: 70px;
-	opacity:0.2;
+	opacity:0.4;
 	background-image: url('../images/mongohq.jpg');
 	background-size: 100% 100%;
 }
@@ -209,7 +346,7 @@ a#deleteMessage2:hover {
 	display: block;
 	text-align:center;
 	float: left;
-	margin-left: 35px;
+	margin-left: 0px;
 	height: 60px;
 	width: 70px;
 	opacity:1.0;
@@ -224,10 +361,10 @@ a#deleteMessage2:hover {
 	display: block;
 	text-align:center;
 	float: left;
-	margin-left: 35px;
+	margin-left: 0px;
 	height: 60px;
 	width: 70px;
-	opacity:0.2;
+	opacity:0.4;
 	background-image: url('../images/mongodb.jpg');
 	background-size: 100% 100%;
 }
@@ -238,7 +375,7 @@ a#deleteMessage2:hover {
 	display: block;
 	text-align:center;
 	float: left;
-	margin-left: 35px;
+	margin-left: 0px;
 	height: 60px;
 	width: 70px;
 	opacity:1.0;
@@ -253,10 +390,10 @@ a#deleteMessage2:hover {
 	display: block;
 	text-align:center;
 	float: left;
-	margin-left: 35px;
+	margin-left: 0px;
 	height: 60px;
 	width: 70px;
-	opacity:0.2;
+	opacity:0.4;
 	background-image: url('../images/github.jpg');
 	background-size: 100% 100%;
 }
@@ -267,7 +404,7 @@ a#deleteMessage2:hover {
 	display: block;
 	text-align:center;
 	float: left;
-	margin-left: 35px;
+	margin-left: 0px;
 	height: 60px;
 	width: 70px;
 	opacity:1.0;
@@ -281,10 +418,10 @@ a#deleteMessage2:hover {
 	display: block;
 	text-align:center;
 	float: left;
-	margin-left: 35px;
+	margin-left: 0px;
 	height: 60px;
 	width: 70px;
-	opacity:0.2;
+	opacity:0.4;
 	background-image: url('../images/heroku.jpg');
 	background-size: 100% 100%;
 }
@@ -295,7 +432,7 @@ a#deleteMessage2:hover {
 	display: block;
 	text-align:center;
 	float: left;
-	margin-left: 35px;
+	margin-left: 0px;
 	height: 60px;
 	width: 70px;
 	opacity:1.0;

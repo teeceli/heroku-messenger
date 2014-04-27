@@ -8,9 +8,9 @@ var ObjectId = require("mongoose").ObjectID;
 //var	mongodb = require("mongodb");
 
 // dev
-var port = 3000;
+//var port = 3000;
 // prod
-//var port = process.env.PORT || 5000;
+var port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -50,20 +50,7 @@ app.get("/", function (req, res) {
 app.get("/messages.json", function (req, res) {
 	// res.json returns the entire object as a JSON file
 	//res.json(tweetCounts);
-	Message.find({}, function (err, messages) {
-		// check for errors
-		res.json(messages);
-	});
-});
-
-app.get("/messageList", function (req, res) {
-	res.send("messagelist.html");
-});
-
-app.get("/messages.json", function (req, res) {
-	// res.json returns the entire object as a JSON file
-	//res.json(tweetCounts);
-	Message.find({}, function (err, messages) {
+	Message.find({ $query: {}, $orderby: { messageDate : -1 }}, function (err, messages) {
 		// check for errors
 		res.json(messages);
 	});
