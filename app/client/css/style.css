@@ -74,7 +74,7 @@ th, td {
 }
 
 .prev {
-	margin-left: 80%;
+	margin-left: 40%;
 	//	float: right;
 
 	//margin-top: 100%;
@@ -92,7 +92,7 @@ th, td {
 .prev:hover {
 	//	float: right;
 
-	margin-left: 80%;
+	margin-left: 40%;
 	//margin-top: 100%;
 	//margin-bottom: 0%;
 	text-align: center;
@@ -259,7 +259,7 @@ a#deleteMessage2:hover {
 }
 
 .mainHelpContent p{
-	margin-top: 30px;
+	margin-top: 20px;
 }
 
 .imageBar {
@@ -624,7 +624,13 @@ main {
 }
 
 
-
+footer {
+	float: left;
+	font-size: smaller;
+	margin-top: 60px;
+	clear: both;
+	color: white;
+}
 
 footer p{
 	float: left;

@@ -33,7 +33,8 @@ http.createServer(app).listen(port);
 // This is our mongoose model for todos
 var MessageSchema = mongoose.Schema({
 	message: String,
-	messageDate: Date
+	messageDate: Date,
+	updateDate: Date
 });
 
 var Message = mongoose.model("Message", MessageSchema);
@@ -50,7 +51,7 @@ app.get("/", function (req, res) {
 app.get("/messages.json", function (req, res) {
 	// res.json returns the entire object as a JSON file
 	//res.json(tweetCounts);
-	Message.find({ $query: {}, $orderby: { messageDate : -1 }}, function (err, messages) {
+	Message.find({ $query: { updateDate: { $exists: false }}, $orderby: { messageDate : -1 }}, function (err, messages) {
 		// check for errors
 		res.json(messages);
 	});
@@ -82,12 +83,12 @@ app.post("/sendMessage", function (req, res) {
 });
 
 app.post("/deleteMessage", function (req, res) {
-
 		var dateToDelete = req.body.messageDate;
-		console.log("dateToDelete: " + dateToDelete);
+		var updateDate = req.body.deleteDate;
 		// our client expects *all* of the todo items to be returned,
 		// so we do an additional request to maintain compatibility
-		Message.remove({"messageDate": dateToDelete}, function (err, result) {
+		Message.update({"messageDate": dateToDelete}, { $set: {"updateDate": updateDate}}, function (err, result) {
+		//Message.update({"messageDate": dateToDelete}, { "updateDate": updateDate }, function (err, result) {
 			if (err !== null) {
 				// the element did not get saved!
 				res.send("ERROR");

@@ -60,9 +60,10 @@ function displayHelp() {
 	$(".mainHelpContent").append("<h1>What is this?");
 	$(".mainHelpContent").append("<p>Not much at the moment. Eventually this page will host my first Arduino Microcontrollers project that will be able to tell me in real-time the temperature and humidity of my pet turtle's terrarium and eventually control a spray-mister and heating pad remotely controlled with some switches and servos. The wireless Arduino unit will be able to connect to my local WiFi and send a POST request to a web service hosted on this page. The information broadcasted from the terrarium will be stored in a database and displayed in a new link on this page. For now, you can leave me messages to help me test and build out the rest of the application framework!");
 
-	$(".mainHelpContent").append("<p>This page was built using Node.js for MVC development all contained in Javascript. I used a NoSQL database called MongoDb with the data hosted for free by MongoHQ. The application itself is hosted for free using Heroku. The code is all stored in GitHub under the public domain. For more information on these web technologies please click the links below.")
+	$(".mainHelpContent").append("<p>This page was built using Node.js for MVC development all contained in JavaScript. I used a NoSQL database called MongoDb with the data hosted for free by MongoHQ. The application itself is hosted for free using Heroku. The code is all stored in GitHub under the public domain. For more information on these web technologies please click the links below.")
 	$(".mainHelpContent").append("<p>For more information on building web applications check out Semmy Purewal's book <a href='http://shop.oreilly.com/product/0636920030621.do'>Learning Web Application Development</a>")
 
+	$(".mainHelpContent").append("<p>Timur Celikel<br><a href='https://www.linkedin.com/pub/timur-celikel/48/675/576'>LinkedIn</a><br><a href='https://twitter.com/teeceli'>Twitter</a>");
 	$('.nodeJSImage').click(function(){
    		window.location.href='http://www.nodejs.org';
 	})
@@ -109,7 +110,8 @@ function addMessageFromInputBox() {
 function deleteMessage(message) {
 	var deleteConfirmed = confirm("Are you sure want to delete this message?");
 	if (deleteConfirmed) {
-		var deleteMessage = {"messageDate": message};
+		var deleteDate = new Date();
+		var deleteMessage = {"messageDate": message, "deleteDate": deleteDate};
 		$.post("/deleteMessage", deleteMessage, function (result) {
 				displayMessageList();
 		});
@@ -153,8 +155,7 @@ function displayMessageList() {
 		 
 
 		});
-  		$(".mainMessageContent").append("<span class='prev'></span><span class='next'></span>");
-		    		    console.log("cRowCount " + cRowCount);
+  			$(".mainMessageContent").append("<span class='prev'></span><span class='next'></span>");
 
 		   	if (cRowCount < 8) {
 		    	$(".mainMessageContent").children("span").remove();
@@ -165,11 +166,7 @@ function displayMessageList() {
 
 
 	});
-	//$(".mainMessageContent table tbody").append("<div class='prevDiv'>");
 
-		    //$(".mainMessageContent").append("<div class='spacer'></div><span class='prev'><img src='../images/left-arrow.jpg' width='20' height='30' \></span><span class='next'><img src='../images/right-arrow.jpg' width='20' height='30' \></span>");
-		    //var cRows = $('.mainMessageContent table tbody').find("tr");
-		    //var cRowCount = cRows.size();
 	    	
 	document.getElementsByClassName("displayMessages")[0].style.backgroundImage = 'url(../images/envelope.jpg)';
 }
