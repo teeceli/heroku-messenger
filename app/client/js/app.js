@@ -138,7 +138,7 @@ function displayMessageList() {
 	//$(".mainMessageContent").append("<div class='tableDiv'>");
 	$(".mainMessageContent").append("<table class='paginated-table' id='messageTable'>");
 	$(".mainMessageContent table").append("<tbody>");
-
+	$.ajaxSetup({ cache: false });
 	$.getJSON("messages.json", function (messageObject) {
 		messageObject.forEach( function (message) {
 			if (message.message === undefined) {message.message = '';}
