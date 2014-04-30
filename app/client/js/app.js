@@ -98,7 +98,8 @@ function addMessageFromInputBox() {
 		// clear out form
  		$("input").val("");
 		$("tagInput").val("");
-		//var elem = document.getElementById(".displayMessages");
+
+		document.getElementsByClassName("displayMessages")[0].style.backgroundImage = 'url(../images/envelope-full.jpg)'; 
 
 	});
 }
@@ -155,6 +156,7 @@ function displayMessageList() {
 
 			}
 		    fixTable();
+
 
 	});
 
