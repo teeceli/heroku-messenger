@@ -60,7 +60,7 @@ function displayHelp() {
 						 .append("<p>Not much at the moment. Eventually this page will host my first Arduino Microcontrollers project that will be able to tell me in real-time the temperature and humidity of my pet turtle's terrarium and eventually control a spray-mister and heating pad remotely controlled with some switches and servos. The wireless Arduino unit will be able to connect to my local WiFi and send a POST request to a web service hosted on this page. The information broadcasted from the terrarium will be stored in a database and displayed in a new link on this page. For now, you can leave me messages to help me test and build out the rest of the application framework!")
 						 .append("<p>This page was built using Node.js for MVC development all contained in JavaScript. I used a NoSQL database called MongoDb with the data hosted for free by MongoHQ. The application itself is hosted for free using Heroku. The code is all stored in GitHub under the public domain. For more information on these web technologies please click the links below.")
 						 .append("<p>For more information on building web applications check out Semmy Purewal's book <a href='http://shop.oreilly.com/product/0636920030621.do'>Learning Web Application Development</a>")
-						 .append("<p>Timur Celikel<br><a href='https://www.linkedin.com/pub/timur-celikel/48/675/576'>LinkedIn</a><br><a href='https://twitter.com/teeceli'>Twitter</a>");
+						 .append("<p>Timur Celikel<br><a href='https://www.linkedin.com/pub/timur-celikel/48/675/576'>LinkedIn</a><br><a href='https://twitter.com/teeceli'>Twitter</a><br><a href='https://github.com/teeceli'>Source Code</a>");
 	
 	$('.nodeJSImage').click(function(){
    		window.location.href='http://www.nodejs.org';
@@ -75,7 +75,7 @@ function displayHelp() {
    		window.location.href='http://www.mongodb.org';
 	})
 	$('.gitImage').click(function(){
-   		window.location.href='https://github.com/teeceli';
+   		window.location.href='https://www.github.com';
 	})
 	$('.mongoHQImage').click(function(){
    		window.location.href='http://www.mongohq.com';
