@@ -3,7 +3,7 @@ var main = function () {
 
 	$(".mainMessageContent").hide();
 	$(".mainHelpContent").hide();
-			$("footer").children("span").remove();
+	$("footer").children("span").remove();
 
 
 
@@ -22,7 +22,6 @@ var main = function () {
 
 
 	$(".displayHelp").on("click", function () {
-		console.log("help clicked");
 		displayHelp();
 	}); 
 
@@ -50,20 +49,19 @@ function displayHelp() {
 	var imageBar = $(".imageBar");
 
 	$(".mainHelpContent").append("<div class='imageBar'>");
-	$("footer").append("<span class='nodeJSImage'>");
-	$("footer").append("<span class='herokuImage'>");
-	$("footer").append("<span class='arduinoImage'>");
-	$("footer").append("<span class='mongoImage'>");
-	$("footer").append("<span class='gitImage'>");
+	$("footer").append("<span class='nodeJSImage'>")
+			   .append("<span class='herokuImage'>")
+			   .append("<span class='arduinoImage'>")
+			   .append("<span class='mongoImage'>")
+			   .append("<span class='gitImage'>")
+			   .append("<span class='mongoHQImage'>");
 
-	$("footer").append("<span class='mongoHQImage'>");
-	$(".mainHelpContent").append("<h1>What is this?");
-	$(".mainHelpContent").append("<p>Not much at the moment. Eventually this page will host my first Arduino Microcontrollers project that will be able to tell me in real-time the temperature and humidity of my pet turtle's terrarium and eventually control a spray-mister and heating pad remotely controlled with some switches and servos. The wireless Arduino unit will be able to connect to my local WiFi and send a POST request to a web service hosted on this page. The information broadcasted from the terrarium will be stored in a database and displayed in a new link on this page. For now, you can leave me messages to help me test and build out the rest of the application framework!");
-
-	$(".mainHelpContent").append("<p>This page was built using Node.js for MVC development all contained in JavaScript. I used a NoSQL database called MongoDb with the data hosted for free by MongoHQ. The application itself is hosted for free using Heroku. The code is all stored in GitHub under the public domain. For more information on these web technologies please click the links below.")
-	$(".mainHelpContent").append("<p>For more information on building web applications check out Semmy Purewal's book <a href='http://shop.oreilly.com/product/0636920030621.do'>Learning Web Application Development</a>")
-
-	$(".mainHelpContent").append("<p>Timur Celikel<br><a href='https://www.linkedin.com/pub/timur-celikel/48/675/576'>LinkedIn</a><br><a href='https://twitter.com/teeceli'>Twitter</a>");
+	$(".mainHelpContent").append("<h1>What is this?")
+						 .append("<p>Not much at the moment. Eventually this page will host my first Arduino Microcontrollers project that will be able to tell me in real-time the temperature and humidity of my pet turtle's terrarium and eventually control a spray-mister and heating pad remotely controlled with some switches and servos. The wireless Arduino unit will be able to connect to my local WiFi and send a POST request to a web service hosted on this page. The information broadcasted from the terrarium will be stored in a database and displayed in a new link on this page. For now, you can leave me messages to help me test and build out the rest of the application framework!")
+						 .append("<p>This page was built using Node.js for MVC development all contained in JavaScript. I used a NoSQL database called MongoDb with the data hosted for free by MongoHQ. The application itself is hosted for free using Heroku. The code is all stored in GitHub under the public domain. For more information on these web technologies please click the links below.")
+						 .append("<p>For more information on building web applications check out Semmy Purewal's book <a href='http://shop.oreilly.com/product/0636920030621.do'>Learning Web Application Development</a>")
+						 .append("<p>Timur Celikel<br><a href='https://www.linkedin.com/pub/timur-celikel/48/675/576'>LinkedIn</a><br><a href='https://twitter.com/teeceli'>Twitter</a>");
+	
 	$('.nodeJSImage').click(function(){
    		window.location.href='http://www.nodejs.org';
 	})
@@ -101,8 +99,6 @@ function addMessageFromInputBox() {
  		$("input").val("");
 		$("tagInput").val("");
 		//var elem = document.getElementById(".displayMessages");
-		document.getElementsByClassName("displayMessages")[0].style.backgroundImage = 'url(../images/envelope-full.jpg)'; 
-		document.getElementsByClassName("displayMessages:hover")[0].style.backgroundImage = 'url(../images/envelope-hover.jpg)'; 
 
 	});
 }
@@ -132,11 +128,10 @@ function displayMessageList() {
 	$(".mainMessageContent").empty();
 	$(".mainHelpContent").hide();
 
-	$(".mainMessageContent").append("<div class='topMarginPlaceHolder'><span>Messages: <span class='clickMessage'>click to delete");
-	$(".mainMessageContent").append("<p>--------------------------------------------------------------------------------------- ");
+	$(".mainMessageContent").append("<div class='topMarginPlaceHolder'><span>Messages: <span class='clickMessage'>click to delete")
+							.append("<p>--------------------------------------------------------------------------------------- ")
+							.append("<table class='paginated-table' id='messageTable'>");
 
-	//$(".mainMessageContent").append("<div class='tableDiv'>");
-	$(".mainMessageContent").append("<table class='paginated-table' id='messageTable'>");
 	$(".mainMessageContent table").append("<tbody>");
 	$.ajaxSetup({ cache: false });
 	$.getJSON("messages.json", function (messageObject) {
@@ -146,11 +141,9 @@ function displayMessageList() {
 
 			jQuery.timeago(new Date());             //=> "less than a minute ago"
 			var timeAgo = jQuery.timeago(message.messageDate);
-			//console.log("table: " + document.getElementById("messageTable").find('tbody'));
-			//document.getElementById("messageTable").append("<tr onclick=deleteMessage('"+message.messageDate+"')><td>" + message.message + "<td>" + timeAgo + "<td class='deleteMessageClass'>");
 
-				$(".mainMessageContent table tbody").append("<tr onclick=deleteMessage('"+message.messageDate+"')><td>" + message.message + "<td>" + timeAgo);
-			 cRows = $('.mainMessageContent table tbody').find("tr");
+			$(".mainMessageContent table tbody").append("<tr onclick=deleteMessage('"+message.messageDate+"')><td>" + message.message + "<td>" + timeAgo);
+			cRows = $('.mainMessageContent table tbody').find("tr");
 		    cRowCount = cRows.size();
 		 
 
@@ -162,13 +155,15 @@ function displayMessageList() {
 
 			}
 		    fixTable();
-		    //$(".footerClass").append("<span class='prev'>Previous</span><span class='next'>Next</span>");
-
 
 	});
 
-	    	
-	document.getElementsByClassName("displayMessages")[0].style.backgroundImage = 'url(../images/envelope.jpg)';
+	$(".displayMessages").hover(function () {
+		$(this).css({backgroundImage: 'url(../images/envelope-hover.jpg)'})
+	}, function(){
+		$(this).css({backgroundImage: 'url(../images/envelope.jpg)'})
+	});
+	  	
 }
 
 
