@@ -5,8 +5,6 @@ var main = function () {
 	$(".mainHelpContent").hide();
 	$("footer").children("span").remove();
 
-
-
 	$(".displayHome").on("click", function () {
 		$(".mainInputContent").show();
 		$(".mainMessageContent").hide();
@@ -14,7 +12,6 @@ var main = function () {
 		$("footer").children("span").remove();
 
 	});
-
 
 	$(".displayMessages").on("click", function () {
 		displayMessageList();
@@ -24,7 +21,6 @@ var main = function () {
 	$(".displayHelp").on("click", function () {
 		displayHelp();
 	}); 
-
 
 	$(".inputClass").on("keypress", function (event) {
 		if (event.keyCode === 13) {
@@ -91,9 +87,9 @@ function addMessageFromInputBox() {
 	$.post("/sendMessage", newMessage, function (result) {
 		console.log("newMessage: " + newMessage.message);
 
-		var messageArray = [];
+		//var messageArray = [];
 
-		messageArray.push(newMessage);
+		//messageArray.push(newMessage);
 
 		// clear out form
  		$("input").val("");
