@@ -1,15 +1,10 @@
-// server.js
 var express = require("express");
 var logfmt = require("logfmt");
-var	http = require("http");
-var	mongoose = require("mongoose");
+var http = require("http");
+var mongoose = require("mongoose");
 var ObjectId = require("mongoose").ObjectID;
 var MessageController = require("./client/controllers/message_controller.js");
 
-
-// dev
-//var port = 3000;
-// prod
 var port = process.env.PORT || 3000;
 
 var app = express();
@@ -24,7 +19,6 @@ var mongoURI = process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/amazerrific';
 
-// Connect to the amazerrific data store in mongo
 mongoose.connect(mongoURI);
 
 // Create our Express-powered HTTP server
