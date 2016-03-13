@@ -178,8 +178,8 @@ function displayMessageList() {
 		}
 	    fixTable();
 
-	    $(".mainMessageContent").append("<div class='message'>Leave Me A Message:</div>");
-	   	$(".mainMessageContent").append("<input id='messageText' type='text' class='inputClass'><button>+</button>");
+	    $(".mainMessageContent").append("<span class='message'>Leave Me A Message");
+	   	$(".mainMessageContent").append("<input id='messageText' type='text' class='inputClass'><button>+</button><span>");
 
 	    			
 
