@@ -2,12 +2,14 @@ var main = function () {
 	"use strict";
 
 	$(".mainMessageContent").hide();
+	$(".mainPhotoContent").hide();
 	$(".mainHelpContent").hide();
 	$("footer").children("span").remove();
 
 	$(".displayHome").on("click", function () {
 		$(".mainInputContent").show();
 		$(".mainMessageContent").hide();
+		$(".mainPhotoContent").hide();
 		$(".mainHelpContent").hide();
 		$("footer").children("span").remove();
 
@@ -17,6 +19,9 @@ var main = function () {
 		displayMessageList();
 	});
 
+	$(".displayPhotos").on("click", function () {
+		displayPhotos();
+	});
 
 	$(".displayHelp").on("click", function () {
 		displayHelp();
@@ -39,6 +44,8 @@ function displayHelp() {
 	$(".mainHelpContent").show();
 	$(".mainInputContent").hide();
 	$(".mainMessageContent").hide();
+	$(".mainPhotoContent").hide();
+
 	$("footer").children("span").remove();
 
 	$(".imageBar").append("<h1>Help");
@@ -85,10 +92,6 @@ function addMessageFromInputBox() {
 	$.post("/sendMessage", newMessage, function (result) {
 		console.log("newMessage: " + newMessage.message);
 
-		//var messageArray = [];
-
-		//messageArray.push(newMessage);
-
 		// clear out form
  		$("input").val("");
 		$("tagInput").val("");
@@ -109,8 +112,19 @@ function deleteMessage(message) {
 	}
 	$(".mainInputContent").hide();
 	$(".mainMessageContent").show();
+	$(".mainPhotoContent").hide();
 	$(".mainHelpContent").hide();
+
 	event.preventDefault();
+}
+
+function displayPhotos() {
+	$(".mainInputContent").hide();
+	$(".mainMessageContent").hide();
+	$(".mainPhotoContent").show();
+	$(".mainHelpContent").hide();
+
+	$(".mainPhotoContent").append("<div><img src='../images/ensenada/corazon_de_la_tierra.jpg' alt='Corazon De La Tierra' height='800' width='600'></div>");
 }
 
 function displayMessageList() {
@@ -121,6 +135,7 @@ function displayMessageList() {
 	$(".mainInputContent").hide();
 	$(".mainMessageContent").show();
 	$(".mainMessageContent").empty();
+	$(".mainPhotoContent").hide();
 	$(".mainHelpContent").hide();
 
 	$(".mainMessageContent").append("<div class='topMarginPlaceHolder'><span>Messages: <span class='clickMessage'>click to delete")
@@ -140,17 +155,15 @@ function displayMessageList() {
 			$(".mainMessageContent table tbody").append("<tr onclick=deleteMessage('"+message.messageDate+"')><td>" + message.message + "<td>" + timeAgo);
 			cRows = $('.mainMessageContent table tbody').find("tr");
 		    cRowCount = cRows.size();
-		 
-
 		});
-  			$(".mainMessageContent").append("<span class='prev'></span><span class='next'></span>");
 
-		   	if (cRowCount < 8) {
-		    	$(".mainMessageContent").children("span").remove();
+  		$(".mainMessageContent").append("<span class='prev'></span><span class='next'></span>");
 
-			}
-		    fixTable();
+	   	if (cRowCount < 8) {
+	    	$(".mainMessageContent").children("span").remove();
 
+		}
+	    fixTable();
 
 	});
 
@@ -161,7 +174,6 @@ function displayMessageList() {
 	});
 	  	
 }
-
 
 function fixTable() {
 
