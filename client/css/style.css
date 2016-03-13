@@ -146,17 +146,21 @@ tr {
 	text-align: center;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	color: white;
+	color: #006699;
 	font-size: 21px;
 }
 
 #about-text {
 	text-align: center;
 	display: block;
-	color: white;
-	margin-top: 50px;
+	color: #006699;
+	margin-top: 30px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#contact-text {
+	color: white;
 }
 
 .coverContent {
@@ -261,7 +265,7 @@ tr {
 	font-size: 16px;
 	line-height: 1;
 	margin-top: 50px;
-	margin-right: 10px;
+	margin-right: 160px;
 }
 
 .inputClass {
@@ -329,7 +333,7 @@ tr {
 button{
 	height: auto;
 	width: auto;
-	background-color: #3366FF;
+	background-color: #006699;
 	color: white;
 	text-align: center;
 	line-height: 1;

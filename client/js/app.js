@@ -126,15 +126,18 @@ function displayHelp() {
 	$(".mainHelpContent").show();
 	$(".mainHelpContent").empty();
 
-	$(".mainHelpContent").append("<div id='page-header'>About Me</div>")
-						//.append("<div id='about-text'><p>Just my personal node/js page backed by a nosql db for testing webdev concepts and a place to put my photos</p></div>")
-						.append("<div id='about-text'><br /><p>Timur Celikel<br />tcelikel@gmail.com<br /><br /></p></div>")
-						.append("<p><div id='about-text'><a href='https://www.linkedin.com/pub/timur-celikel/48/675/576'><img src='../images/linked_in.png' alt='LinkedIn' width='55' height='50'/></a>"
+	$(".mainHelpContent").append("<div id='page-header'>About Me</div>"
+						+ "<div id='contact-text'><br /><p>Timur Celikel<br /><br />tcelikel@gmail.com</p></div>"
+						+ "<div id='about-text'>Java Web Software Engineer. Arduino and Node hobbyist. Animal lover.<br />"
+						+ "Learning Spanish through self-study and frequent trips South of the border."
+						+ "<p>Just my personal node/js page backed by a nosql db for testing webdev concepts.<br />"
+						+ "You can find my Mac Monitor app I built to monitor my pet turtle <a href='http://www.macmonitor.info/'>here</a></p>"
+						+ "<br /><p><a href='https://www.linkedin.com/pub/timur-celikel/48/675/576'><img src='../images/linked_in.png' alt='LinkedIn' width='55' height='50'/></a>"
 						+ "<a href='https://twitter.com/teeceli'><img src='../images/twitter.png' alt='Twitter' width='55' height='50'/></a>"
 						+ "<a href='https://github.com/teeceli/heroku-messenger'><img src='../images/github.jpg' alt='Git Repository' width='55' height='50'/></a></p></div>");
 
 	//$(".mainHelpContent").append("<p>--------------------------------------------------------------------------------------- ")					
-	$(".mainHelpContent").append("<div class='message'><span>Leave Me A Message");
+	$(".mainHelpContent").append("<div class='message'><span>Leave me a public message:");
 	$(".mainHelpContent").append("<input id='messageText' type='text' class='inputClass'><button>Submit</button><span></div>");
 
 	$(".inputClass").on("keypress", function (event) {
