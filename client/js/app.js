@@ -84,7 +84,6 @@ function displayHelp() {
 
 }
 
-
 function addMessageFromInputBox() {
 	var messageText = $("#messageText").val();
 	var newMessage = {"message": messageText};
@@ -249,6 +248,3 @@ function fixTable() {
 }
 
 $(document).ready(main);
-
-
-
