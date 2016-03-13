@@ -3,12 +3,14 @@ var main = function () {
 
 	$(".mainMessageContent").hide();
 	$(".mainPhotoContent").hide();
+	$(".mainHelpContent").hide();
 	$("footer").children("span").remove();
 
 	$(".displayHome").on("click", function () {
-		$(".mainInputContent").show();
+		$(".mainContent").show();
 		$(".mainMessageContent").hide();
 		$(".mainPhotoContent").hide();
+		$(".mainHelpContent").hide();
 		$("footer").children("span").remove();
 
 	});
@@ -19,6 +21,10 @@ var main = function () {
 
 	$(".displayPhotos").on("click", function () {
 		displayPhotos();
+	});
+
+	$(".displayHelp").on("click", function () {
+		displayHelp();
 	});
 
 	$(".inputClass").on("keypress", function (event) {
@@ -34,12 +40,13 @@ var main = function () {
 };
 
 function displayPhotos() {
-	$(".mainInputContent").hide();
+	$(".mainContent").hide();
 	$(".mainMessageContent").hide();
 	$(".mainPhotoContent").show();
 	$(".mainPhotoContent").empty();
+	$(".mainHelpContent").hide();
 
-	$(".mainPhotoContent").append("<div id='photo-header'>Trip to Ensenada and Valle de Guadalupe - March 2016</div>")
+	$(".mainPhotoContent").append("<div id='page-header'>Trip to Ensenada and Valle de Guadalupe - March 2016</div>")
 	$(".mainPhotoContent").append("<div id='photos'><img src='../images/ensenada/bufadora.jpg' alt='La Bufadora' width='1024' height='768'></div>");
 	$(".mainPhotoContent").append("<div id='photos'><img src='../images/ensenada/bufadora2.jpg' alt='La Bufadora' width='1024' height='768'></div>");
 	$(".mainPhotoContent").append("<div id='photos'><img src='../images/ensenada/corazon_de_la_tierra.jpg' alt='Corazon De La Tierra' width='1024' height='768'></div>");
@@ -60,10 +67,11 @@ function displayMessageList() {
 
 	var cRows;
 	var cRowCount = 0;
-	$(".mainInputContent").hide();
+	$(".mainContent").hide();
 	$(".mainMessageContent").show();
 	$(".mainMessageContent").empty();
 	$(".mainPhotoContent").hide();
+	$(".mainHelpContent").hide();
 
 	$(".mainMessageContent").append("<div class='topMarginPlaceHolder'><span>Messages: <span class='clickMessage'>click to delete")
 							.append("<p>--------------------------------------------------------------------------------------- ")
@@ -91,7 +99,7 @@ function displayMessageList() {
 
 		}
 	    fixTable();
-	    
+
 		$(".mainMessageContent").append("<p>--------------------------------------------------------------------------------------- ")					
 	    $(".mainMessageContent").append("<div class='message'><span>Leave Me A Message");
 	   	$(".mainMessageContent").append("<input id='messageText' type='text' class='inputClass'><button>+</button><span></div>");
@@ -122,7 +130,22 @@ function displayMessageList() {
 			}
 		}
 	});
-	
+}
+
+function displayHelp() {
+	$(".mainContent").hide();
+	$(".mainMessageContent").hide();
+	$(".mainPhotoContent").hide();
+	$(".mainHelpContent").show();
+	$(".mainHelpContent").empty();
+
+	$(".mainHelpContent").append("<div id='page-header'>About Me</div>")
+						//.append("<div id='about-text'><p>Just my personal node/js page backed by a nosql db for testing webdev concepts and a place to put my photos</p></div>")
+						.append("<div id='about-text'><br /><p>Timur Celikel<br />tcelikel@gmail.com<br></div>")
+						.append("<span id='about-link'><a href='https://www.linkedin.com/pub/timur-celikel/48/675/576'><img src='../images/linked_in.png' alt='LinkedIn' width='55' height='50'/></a><br></span>")
+						.append("<span id='about-link'><a href='https://twitter.com/teeceli'><img src='../images/twitter.png' alt='Twitter' width='55' height='50'/></a><br></span>")
+						.append("<span id='about-link'><a href='https://github.com/teeceli/heroku-messenger'><img src='../images/github.jpg' alt='Git Repository' width='55' height='50'/></a></span>");
+
 }
 
 function addMessageFromInputBox() {
@@ -152,7 +175,7 @@ function deleteMessage(message) {
 				displayMessageList();
 		});
 	}
-	$(".mainInputContent").hide();
+	$(".mainContent").hide();
 	$(".mainMessageContent").show();
 	$(".mainPhotoContent").hide();
 

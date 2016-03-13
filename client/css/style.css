@@ -142,12 +142,28 @@ tr {
 	margin-right: auto;
 }
 
-#photo-header {
+#page-header {
+	text-align: center;
 	margin-top: 30px;
 	margin-bottom: 30px;
 	color: white;
-	text-align: center;
 	font-size: 21px;
+}
+
+#about-text {
+	text-align: center;
+	display: block;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#about-link {
+	text-align: center;
+	display: inline-block;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .mainMessageContent {
@@ -208,11 +224,13 @@ tr {
 }
 
 .mainHelpContent .mainPhotoContent {
+	text-align: center;
 	color: white;
 	font-weight:normal;
 	background-color: black;
+	display: inline-block;
 	font-size: 100%;
-	height: 384px;
+	//height: 384px;
 	line-height:1;
 	border-bottom: 1px solid black;
 	margin-left: auto;
@@ -254,7 +272,6 @@ tr {
 	font-weight:normal;
 	background-color: black;
 	font-size: 12px;
-	//height: 50px;
 	line-height:1;
 	margin-top: 25px;
 	margin-right: 10px;
@@ -272,12 +289,7 @@ tr {
 }
 
 .displayHome {
-	color: white;
-	background-color: black;
-	text-align: center;
 	display: inline-block;
-	text-decoration: none;
-	font-size: 300%;
 	border-style: solid;
 	border-width: 2px;
 	border-color: white;
@@ -290,9 +302,7 @@ tr {
 }
 
 .displayMessages {
-	color: white;
 	display: inline-block;
-	text-align: center;
 	margin-left: 5px;
 	height: 55px;
 	width: 85px;
@@ -301,8 +311,6 @@ tr {
 }
 
 .displayMessages:hover {
-	color: white;
-	text-align: center;
 	display: inline-block;
 	margin-left: 5px;
 	height: 55px;
@@ -312,9 +320,7 @@ tr {
 }
 
 .displayPhotos {
-	color: white;
 	display: inline-block;
-	text-align:center;
 	margin-left: 5px;
 	height: 55px;
 	width: 65px;
@@ -323,29 +329,16 @@ tr {
 }
 
 .displayHelp {
-	color: white;
-	background-color: black;
-	display: inline;
-	float: left;
-	text-align:center;
-	text-decoration:none;
-	font-size: 300%;
+	display: inline-block;
 	border-style: solid;
+	background-color: white;
 	border-width: 2px;
 	border-color: white;
 	border-radius: 5px 5px 5px 5px;
 	height: 50px;
 	width: 55px;
-}
-
-.displayHelp:hover {
-	color: black;
-	text-align:center;
-	background-color: white;
-	text-decoration:none;
-	border-radius: 5px 5px 5px 5px;
-	height: 50px;
-	width: 55px;
+	background-image: url('../images/question_mark.png');
+	background-size: 100% 100%;
 }
 
 button{
