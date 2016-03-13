@@ -141,10 +141,10 @@ function displayHelp() {
 
 	$(".mainHelpContent").append("<div id='page-header'>About Me</div>")
 						//.append("<div id='about-text'><p>Just my personal node/js page backed by a nosql db for testing webdev concepts and a place to put my photos</p></div>")
-						.append("<div id='about-text'><br /><p>Timur Celikel<br />tcelikel@gmail.com<br></div>")
-						.append("<span id='about-link'><a href='https://www.linkedin.com/pub/timur-celikel/48/675/576'><img src='../images/linked_in.png' alt='LinkedIn' width='55' height='50'/></a><br></span>")
-						.append("<span id='about-link'><a href='https://twitter.com/teeceli'><img src='../images/twitter.png' alt='Twitter' width='55' height='50'/></a><br></span>")
-						.append("<span id='about-link'><a href='https://github.com/teeceli/heroku-messenger'><img src='../images/github.jpg' alt='Git Repository' width='55' height='50'/></a></span>");
+						.append("<div id='about-text'><br /><p>Timur Celikel<br />tcelikel@gmail.com<br /><br /></p></div>")
+						.append("<p><div id='about-text'><a href='https://www.linkedin.com/pub/timur-celikel/48/675/576'><img src='../images/linked_in.png' alt='LinkedIn' width='55' height='50'/></a>"
+						+ "<a href='https://twitter.com/teeceli'><img src='../images/twitter.png' alt='Twitter' width='55' height='50'/></a>"
+						+ "<a href='https://github.com/teeceli/heroku-messenger'><img src='../images/github.jpg' alt='Git Repository' width='55' height='50'/></a></p></div>");
 
 }
 
