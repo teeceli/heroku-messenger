@@ -121,9 +121,13 @@ function displayPhotos() {
 	$(".mainInputContent").hide();
 	$(".mainMessageContent").hide();
 	$(".mainPhotoContent").show();
+	$(".mainPhotoContent").empty();
 	$(".mainHelpContent").hide();
 
-	$(".mainPhotoContent").append("<div><img src='../images/ensenada/corazon_de_la_tierra.jpg' alt='Corazon De La Tierra' height='800' width='600'></div>");
+	$(".mainPhotoContent").append("<div><img src='../images/ensenada/bufadora.jpg' alt='La Bufadora' width='1024' height='768'></div>");
+	$(".mainPhotoContent").append("<div><img src='../images/ensenada/bufadora2.jpg' alt='La Bufadora' width='1024' height='768'></div>");
+	$(".mainPhotoContent").append("<div><img src='../images/ensenada/corazon_de_la_tierra.jpg' alt='Corazon De La Tierra' width='1024' height='768'></div>");
+
 }
 
 function displayMessageList() {
