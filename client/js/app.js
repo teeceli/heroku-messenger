@@ -103,8 +103,9 @@ function displayMessageList() {
 		$(this).css({backgroundImage: 'url(../images/envelope.jpg)'})
 	});
 
+	var message = $("#messageText").val();
 	 $('.mainMessageContent').on('click', 'button', function() {
-	 	if ($("#messageText").val() !== null) {
+	 	if (typeof message !== 'undefined') {
 			addMessageFromInputBox();
 		} else {
 			alert('Please enter a message');
@@ -113,7 +114,7 @@ function displayMessageList() {
 
 	$(".mainMessageContent").on("keypress", '.inputClass', function (event) {
 		if (event.keyCode === 13) {
-			if ($("#messageText").val() !== null) {
+			if (typeof message !== 'undefined') {
 				addMessageFromInputBox();
 			} else {
 				alert('Please enter a message');
@@ -127,7 +128,7 @@ function addMessageFromInputBox() {
 	var messageText = $("#messageText").val();
 	var newMessage = {"message": messageText};
 
-	if (messageText !== null) {
+	if (typeof messageText !== 'undefined') {
 		$.post("/sendMessage", newMessage, function (result) {
 			console.log("newMessage: " + newMessage.message);
 
