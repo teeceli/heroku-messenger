@@ -134,6 +134,17 @@ function displayMessageList() {
 	}, function(){
 		$(this).css({backgroundImage: 'url(../images/envelope.jpg)'})
 	});
+
+	$(".inputClass").on("keypress", function (event) {
+		if (event.keyCode === 13) {
+			addMessageFromInputBox();
+		}
+	});
+	
+	var $button = $("button");
+	$button.on("click", function () {
+		addMessageFromInputBox();
+	});
 	  	
 }
 
