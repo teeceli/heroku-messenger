@@ -32,6 +32,8 @@ header p{
 table {
     border: 1px solid black;
     margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto
     color: white;
 }
 
@@ -41,6 +43,8 @@ table {
 
 .prevDiv {
 	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
 	border: 1px solid white;
 }
 
@@ -156,8 +160,10 @@ a#deleteMessage2:hover {
 	font-size: 110%;
 	height: 384px;
 	line-height:1;
+	margin-left: auto;
+	margin-right: auto;
 	border-bottom: 1px solid black;
-
+	text-align: center;
 }
 
 .mainMessageContent table{
@@ -165,8 +171,7 @@ a#deleteMessage2:hover {
 }
 
 .mainMessageContent td{
-	    border: 1px solid white;
-
+	border: 1px solid white;
 	width:50%;
 	padding: 10px;
 }
@@ -396,7 +401,6 @@ a#deleteMessage2:hover {
 	color: white;
 	font-weight:bold;
 	background-color: black;
-	font-size: 500%;
 	height: 500px;
 	line-height:1;
 	margin-top: 50px;
