@@ -3,14 +3,12 @@ var main = function () {
 
 	$(".mainMessageContent").hide();
 	$(".mainPhotoContent").hide();
-	$(".mainHelpContent").hide();
 	$("footer").children("span").remove();
 
 	$(".displayHome").on("click", function () {
 		$(".mainInputContent").show();
 		$(".mainMessageContent").hide();
 		$(".mainPhotoContent").hide();
-		$(".mainHelpContent").hide();
 		$("footer").children("span").remove();
 
 	});
@@ -23,10 +21,6 @@ var main = function () {
 		displayPhotos();
 	});
 
-	$(".displayHelp").on("click", function () {
-		displayHelp();
-	}); 
-
 	$(".inputClass").on("keypress", function (event) {
 		if (event.keyCode === 13) {
 			addMessageFromInputBox();
@@ -38,51 +32,6 @@ var main = function () {
 		addMessageFromInputBox();
 	});
 };
-
-function displayHelp() {
-	$(".mainHelpContent").empty();
-	$(".mainHelpContent").show();
-	$(".mainInputContent").hide();
-	$(".mainMessageContent").hide();
-	$(".mainPhotoContent").hide();
-
-	$("footer").children("span").remove();
-
-	$(".imageBar").append("<h1>Help");
-	var imageBar = $(".imageBar");
-
-	$(".mainHelpContent").append("<div class='imageBar'>");
-	$("footer").append("<span class='nodeJSImage'>")
-			   .append("<span class='herokuImage'>")
-			   .append("<span class='arduinoImage'>")
-			   .append("<span class='mongoImage'>")
-			   .append("<span class='gitImage'>")
-			   .append("<span class='mongoHQImage'>");
-
-	$(".mainHelpContent").append("<h1>What is this?")
-						 .append("<p>Just my personal node/js sandbox backed by a nosql db for testing webdev concepts and just general practice</p>")
-						 .append("<p>Timur Celikel<br><a href='https://www.linkedin.com/pub/timur-celikel/48/675/576'>LinkedIn</a><br><a href='https://twitter.com/teeceli'>Twitter</a><br><a href='https://github.com/teeceli/heroku-messenger'>Source Code / Git Repository</a>");
-	
-	$('.nodeJSImage').click(function(){
-   		window.location.href='http://www.nodejs.org';
-	})
-	$('.herokuImage').click(function(){
-   		window.location.href='http://www.heroku.com';
-	})
-	$('.arduinoImage').click(function(){
-   		window.location.href='http://www.arduino.cc';
-	})
-	$('.mongoImage').click(function(){
-   		window.location.href='http://www.mongodb.org';
-	})
-	$('.gitImage').click(function(){
-   		window.location.href='https://www.github.com';
-	})
-	$('.mongoHQImage').click(function(){
-   		window.location.href='http://www.mongohq.com';
-	})
-
-}
 
 function addMessageFromInputBox() {
 	var messageText = $("#messageText").val();
@@ -112,7 +61,6 @@ function deleteMessage(message) {
 	$(".mainInputContent").hide();
 	$(".mainMessageContent").show();
 	$(".mainPhotoContent").hide();
-	$(".mainHelpContent").hide();
 
 	event.preventDefault();
 }
@@ -122,7 +70,6 @@ function displayPhotos() {
 	$(".mainMessageContent").hide();
 	$(".mainPhotoContent").show();
 	$(".mainPhotoContent").empty();
-	$(".mainHelpContent").hide();
 
 	$(".mainPhotoContent").append("<div id='photo-header'>Trip to Ensenada and Valle de Guadalupe - March 2016</div>")
 	$(".mainPhotoContent").append("<div id='photos'><img src='../images/ensenada/bufadora.jpg' alt='La Bufadora' width='1024' height='768'></div>");
@@ -149,7 +96,6 @@ function displayMessageList() {
 	$(".mainMessageContent").show();
 	$(".mainMessageContent").empty();
 	$(".mainPhotoContent").hide();
-	$(".mainHelpContent").hide();
 
 	$(".mainMessageContent").append("<div class='topMarginPlaceHolder'><span>Messages: <span class='clickMessage'>click to delete")
 							.append("<p>--------------------------------------------------------------------------------------- ")
@@ -178,11 +124,8 @@ function displayMessageList() {
 		}
 	    fixTable();
 
-	    $(".mainMessageContent").append("<span class='message'>Leave Me A Message");
-	   	$(".mainMessageContent").append("<input id='messageText' type='text' class='inputClass'><button>+</button><span>");
-
-	    			
-
+	    $(".mainMessageContent").append("<div><span class='message'>Leave Me A Message");
+	   	$(".mainMessageContent").append("<input id='messageText' type='text' class='inputClass'><button>+</button><span></div>");
 
 	});
 
