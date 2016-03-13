@@ -27,16 +27,7 @@ var main = function () {
 		displayHelp();
 	});
 
-	$(".inputClass").on("keypress", function (event) {
-		if (event.keyCode === 13) {
-			addMessageFromInputBox();
-		}
-	});
 	
-	var $button = $("button");
-	$button.on("click", function () {
-		addMessageFromInputBox();
-	});
 };
 
 function displayPhotos() {
@@ -58,7 +49,6 @@ function displayPhotos() {
 	$(".mainPhotoContent").append("<div id='photos'><img src='../images/ensenada/museum.jpg' alt='Museum' width='1024' height='768'></div>");
 	$(".mainPhotoContent").append("<div id='photos'><img src='../images/ensenada/vineyard.jpg' alt='Vineyard' width='1024' height='768'></div>");
 	$(".mainPhotoContent").append("<div id='photos'><img src='../images/ensenada/leah_goat.jpg' alt='Leah with a goat' width='1024' height='768'></div>");
-
 
 }
 
@@ -100,10 +90,7 @@ function displayMessageList() {
 		}
 	    fixTable();
 
-		$(".mainMessageContent").append("<p>--------------------------------------------------------------------------------------- ")					
-	    $(".mainMessageContent").append("<div class='message'><span>Leave Me A Message");
-	   	$(".mainMessageContent").append("<input id='messageText' type='text' class='inputClass'><button>+</button><span></div>");
-
+		
 	});
 
 	$(".displayMessages").hover(function () {
@@ -146,6 +133,21 @@ function displayHelp() {
 						+ "<a href='https://twitter.com/teeceli'><img src='../images/twitter.png' alt='Twitter' width='55' height='50'/></a>"
 						+ "<a href='https://github.com/teeceli/heroku-messenger'><img src='../images/github.jpg' alt='Git Repository' width='55' height='50'/></a></p></div>");
 
+	//$(".mainHelpContent").append("<p>--------------------------------------------------------------------------------------- ")					
+	$(".mainHelpContent").append("<div class='message'><span>Leave Me A Message");
+	$(".mainHelpContent").append("<input id='messageText' type='text' class='inputClass'><button>+</button><span></div>");
+
+	$(".inputClass").on("keypress", function (event) {
+		if (event.keyCode === 13) {
+			addMessageFromInputBox();
+		}
+	});
+	
+	var $button = $("button");
+	$button.on("click", function () {
+		addMessageFromInputBox();
+	});
+	
 }
 
 function addMessageFromInputBox() {
