@@ -65,7 +65,8 @@ tr {
 }
 
 .prev {
-	margin-left: 40%;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 	background-image: url('../images/left-arrow.jpg');
 	background-size: 100% 100%;
@@ -76,20 +77,21 @@ tr {
 }
 
 .prev:hover {
-	margin-left: 40%;
+	margin-left: auto;
+	margin-right: auto;	
 	text-align: center;
 	background-image: url('../images/left-arrow-hover.jpg');
 	background-size: 100% 100%;
 	border-radius: 5px 5px 5px 5px;
-
 	display: inline-block;
 	width: 20px;
 	height: 30px;
 }
 
 .next {
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
-
 	border-radius: 5px 5px 5px 5px;
 	background-image: url('../images/right-arrow.jpg');
 	background-size: 100% 100%;
@@ -99,6 +101,8 @@ tr {
 }
 
 .next:hover {
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 	border-radius: 5px 5px 5px 5px;
 	background-image: url('../images/right-arrow-hover.jpg');
@@ -112,17 +116,13 @@ tr {
     color: white;
     text-align: center;
     margin-right: 10px;
+    border: 0px solid black;
+    cursor: pointer;
     user-select: none;
    -o-user-select:none;
    -moz-user-select: none;
    -khtml-user-select: none;
    -webkit-user-select: none;
-}
-
-.prev, .next {
-    border: 0px solid black;
-    cursor: pointer;
-    color: white;
 }
 
 .prev.disabled, .next.disabled {
@@ -155,7 +155,7 @@ tr {
 	font-weight:normal;
 	background-color: black;
 	font-size: 110%;
-	height: 384px;
+	//height: 384px;
 	line-height:1;
 	margin-left: auto;
 	margin-right: auto;
@@ -253,10 +253,10 @@ tr {
 	color: #006699;
 	font-weight:normal;
 	background-color: black;
-	font-size: 200%;
+	font-size: 18px;
 	height: 50px;
 	line-height:1;
-	margin-top: 70px;
+	//margin-top: 70px;
 }
 
 .inputClass {
