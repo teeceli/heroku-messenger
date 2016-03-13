@@ -135,17 +135,16 @@ function displayMessageList() {
 		$(this).css({backgroundImage: 'url(../images/envelope.jpg)'})
 	});
 
+	 $('.message').on('click', 'button', function() {
+		addMessageFromInputBox();
+ 	 });
+
 	$(".inputClass").on("keypress", function (event) {
 		if (event.keyCode === 13) {
 			addMessageFromInputBox();
 		}
 	});
 	
-	var $button = $("button");
-	$button.on("click", function () {
-		addMessageFromInputBox();
-	});
-	  	
 }
 
 function fixTable() {
