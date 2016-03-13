@@ -47,11 +47,6 @@ table {
 	border: 1px solid white;
 }
 
-#cover {
-	width: 500px;
-	height: 500px;
-}
-
 th {
     background-color: black;
     color: white;
@@ -136,10 +131,23 @@ tr {
     color: white;
 }
 
+#cover {
+	width: 500px;
+	height: 500px;
+}
+
 #photos {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#photo-header {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: white;
+	text-align: center;
+	font-size: 21px;
 }
 
 .mainMessageContent {

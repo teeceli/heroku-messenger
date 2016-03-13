@@ -124,6 +124,7 @@ function displayPhotos() {
 	$(".mainPhotoContent").empty();
 	$(".mainHelpContent").hide();
 
+	$(".mainPhotoContent").append("<div id='photo-header'>Trip to Ensenada and Valle de Guadalupe - March 2016</div>")
 	$(".mainPhotoContent").append("<div id='photos'><img src='../images/ensenada/bufadora.jpg' alt='La Bufadora' width='1024' height='768'></div>");
 	$(".mainPhotoContent").append("<div id='photos'><img src='../images/ensenada/bufadora2.jpg' alt='La Bufadora' width='1024' height='768'></div>");
 	$(".mainPhotoContent").append("<div id='photos'><img src='../images/ensenada/corazon_de_la_tierra.jpg' alt='Corazon De La Tierra' width='1024' height='768'></div>");
