@@ -127,6 +127,14 @@ function displayPhotos() {
 	$(".mainPhotoContent").append("<div><img src='../images/ensenada/bufadora.jpg' alt='La Bufadora' width='1024' height='768'></div>");
 	$(".mainPhotoContent").append("<div><img src='../images/ensenada/bufadora2.jpg' alt='La Bufadora' width='1024' height='768'></div>");
 	$(".mainPhotoContent").append("<div><img src='../images/ensenada/corazon_de_la_tierra.jpg' alt='Corazon De La Tierra' width='1024' height='768'></div>");
+	$(".mainPhotoContent").append("<div><img src='../images/ensenada/corazon.jpg' alt='Corazon De La Tierra' width='1024' height='768'></div>");
+	$(".mainPhotoContent").append("<div><img src='../images/ensenada/corazon2.jpg' alt='Corazon De La Tierra' width='1024' height='768'></div>");
+	$(".mainPhotoContent").append("<div><img src='../images/ensenada/flowers.jpg' alt='Flowers' width='1024' height='768'></div>");
+	$(".mainPhotoContent").append("<div><img src='../images/ensenada/fountain.jpg' alt='Fountain' width='1024' height='768'></div>");
+	$(".mainPhotoContent").append("<div><img src='../images/ensenada/hacienda_guadalupe.jpg' alt='Hacienda Guadalupe' width='1024' height='768'></div>");
+	$(".mainPhotoContent").append("<div><img src='../images/ensenada/museum.jpg' alt='Museum' width='1024' height='768'></div>");
+	$(".mainPhotoContent").append("<div><img src='../images/ensenada/vineyard.jpg' alt='Vineyard' width='1024' height='768'></div>");
+	$(".mainPhotoContent").append("<div><img src='../images/ensenada/leah_goat.jpg' alt='Leah with a goat' width='1024' height='768'></div>");
 
 }
 
