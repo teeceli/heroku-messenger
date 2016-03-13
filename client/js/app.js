@@ -135,7 +135,7 @@ function displayHelp() {
 
 	//$(".mainHelpContent").append("<p>--------------------------------------------------------------------------------------- ")					
 	$(".mainHelpContent").append("<div class='message'><span>Leave Me A Message");
-	$(".mainHelpContent").append("<input id='messageText' type='text' class='inputClass'><button>+</button><span></div>");
+	$(".mainHelpContent").append("<input id='messageText' type='text' class='inputClass'><button>Submit</button><span></div>");
 
 	$(".inputClass").on("keypress", function (event) {
 		if (event.keyCode === 13) {
@@ -147,7 +147,7 @@ function displayHelp() {
 	$button.on("click", function () {
 		addMessageFromInputBox();
 	});
-	
+
 }
 
 function addMessageFromInputBox() {

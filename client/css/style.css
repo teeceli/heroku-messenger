@@ -154,6 +154,7 @@ tr {
 	text-align: center;
 	display: block;
 	color: white;
+	margin-top: 50px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -161,14 +162,12 @@ tr {
 .coverContent {
 	text-align: center;
 	color: white;
-	//font-weight:bold;
 	background-color: black;
 	height: 500px;
 	line-height: 1;
 	margin-top: 50px;
 	margin-left: auto;
 	margin-right: auto;
-	//min-width: 750px;
 }
 
 .mainMessageContent {
@@ -176,7 +175,6 @@ tr {
 	font-weight:normal;
 	background-color: black;
 	font-size: 110%;
-	//height: 384px;
 	line-height: 1;
 	margin-left: auto;
 	margin-right: auto;
@@ -228,36 +226,15 @@ tr {
 	margin-top: 50px;
 }
 
-/*
-.mainHelpContent .mainPhotoContent {
-	text-align: center;
-	color: white;
-	font-weight: normal;
-	background-color: black;
-	display: inline;
-	font-size: 100%;
-	height: 500px;
-	line-height: 1;
-	border-bottom: 1px solid black;
-	margin-left: auto;
-	margin-right: auto;
-}
-*/
-
 .mainHelpContent {
 	text-align: center;
 	color: white;
-	//font-weight: normal;
 	background-color: black;
-	//display: inline-block;
-	//font-size: 100%;
-	//height: 500px;
+	font-size: 100%;
 	margin-top: 50px;
 	line-height: 1;
-	//border-bottom: 1px solid black;
 	margin-left: auto;
 	margin-right: auto;
-	//min-width: 750px;
 }
 
 .mainHelpContent .mainPhotoContent h1{
@@ -281,17 +258,15 @@ tr {
 	color: #006699;
 	font-weight:normal;
 	background-color: black;
-	font-size: 12px;
-	line-height:1;
-	margin-top: 25px;
+	font-size: 16px;
+	line-height: 1;
+	margin-top: 50px;
 	margin-right: 10px;
 }
 
 .inputClass {
 	width: 300px;
-	height: 21px;
 	font-size: 12px;
-	border-radius: 5px 0px 5px 0;
 }
 
 .imageBar {
@@ -352,12 +327,15 @@ tr {
 }
 
 button{
-	height: 25px;
-	width: 30px;
-	line-height:1;
-	margin-left: 2px;
-	font-size: 21px;
-	border-radius: 5px 5px 5px 5px;
+	height: auto;
+	width: auto;
+	background-color: #3366FF;
+	color: white;
+	text-align: center;
+	line-height: 1;
+	margin-left: 5px;
+	padding: 5px;
+	border-radius: 15px 15px 15px 15px;
 
 }
 
