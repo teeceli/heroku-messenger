@@ -33,38 +33,6 @@ var main = function () {
 	});
 };
 
-function addMessageFromInputBox() {
-	var messageText = $("#messageText").val();
-	var newMessage = {"message": messageText};
-	
-	$.post("/sendMessage", newMessage, function (result) {
-		console.log("newMessage: " + newMessage.message);
-
-		// clear out form
- 		$("input").val("");
-		$("tagInput").val("");
-
-		document.getElementsByClassName("displayMessages")[0].style.backgroundImage = 'url(../images/envelope-full.jpg)'; 
-
-	});
-}
-
-function deleteMessage(message) {
-	var deleteConfirmed = confirm("Are you sure want to delete this message?");
-	if (deleteConfirmed) {
-		var deleteDate = new Date();
-		var deleteMessage = {"messageDate": message, "deleteDate": deleteDate};
-		$.post("/deleteMessage", deleteMessage, function (result) {
-				displayMessageList();
-		});
-	}
-	$(".mainInputContent").hide();
-	$(".mainMessageContent").show();
-	$(".mainPhotoContent").hide();
-
-	event.preventDefault();
-}
-
 function displayPhotos() {
 	$(".mainInputContent").hide();
 	$(".mainMessageContent").hide();
@@ -135,16 +103,58 @@ function displayMessageList() {
 		$(this).css({backgroundImage: 'url(../images/envelope.jpg)'})
 	});
 
-	 $('.message').on('click', 'button', function() {
-		addMessageFromInputBox();
+	 $('.mainMessageContent').on('click', 'button', function() {
+	 	if ($("#messageText").val() !== null) {
+			addMessageFromInputBox();
+		} else {
+			alert('Please enter a message');
+		}
  	 });
 
-	$(".inputClass").on("keypress", function (event) {
+	$(".mainMessageContent").on("keypress", '.inputClass', function (event) {
 		if (event.keyCode === 13) {
-			addMessageFromInputBox();
+			if ($("#messageText").val() !== null) {
+				addMessageFromInputBox();
+			} else {
+				alert('Please enter a message');
+			}
 		}
 	});
 	
+}
+
+function addMessageFromInputBox() {
+	var messageText = $("#messageText").val();
+	var newMessage = {"message": messageText};
+
+	if (messageText !== null) {
+		$.post("/sendMessage", newMessage, function (result) {
+			console.log("newMessage: " + newMessage.message);
+
+			// clear out form
+	 		$("input").val("");
+			$("tagInput").val("");
+
+			document.getElementsByClassName("displayMessages")[0].style.backgroundImage = 'url(../images/envelope-full.jpg)'; 
+
+		});
+	}
+}
+
+function deleteMessage(message) {
+	var deleteConfirmed = confirm("Are you sure want to delete this message?");
+	if (deleteConfirmed) {
+		var deleteDate = new Date();
+		var deleteMessage = {"messageDate": message, "deleteDate": deleteDate};
+		$.post("/deleteMessage", deleteMessage, function (result) {
+				displayMessageList();
+		});
+	}
+	$(".mainInputContent").hide();
+	$(".mainMessageContent").show();
+	$(".mainPhotoContent").hide();
+
+	event.preventDefault();
 }
 
 function fixTable() {
