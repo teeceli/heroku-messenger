@@ -178,6 +178,8 @@ function displayMessageList() {
 		}
 	    fixTable();
 
+	    $(".mainMessageContent").append("<div class='message'>Leave Me A Message:</div>");
+
 	});
 
 	$(".displayMessages").hover(function () {
