@@ -332,6 +332,15 @@ tr {
 	background-size: 100% 100%;
 }
 
+.displayMacMonitor {
+	display: inline-block;
+	margin-left: 5px;
+	height: 55px;
+	width: 65px;
+	background-image: url('../images/turtle.png');
+	background-size: 100% 100%;
+}
+
 button{
 	height: auto;
 	width: auto;
