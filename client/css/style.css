@@ -8,8 +8,6 @@
 body {
 	font-size: 100%;
 	margin: auto;
-	//margin-left: auto;
-	//margin-right: auto;
 	max-height: 500px;
 	background-color: black;
 	font-family: 'Roboto';
@@ -294,7 +292,6 @@ tr {
 
 .displayMessages {
 	display: inline-block;
-	margin-left: 5px;
 	height: 55px;
 	width: 85px;
 	background-image: url('../images/envelope.jpg');
@@ -303,7 +300,6 @@ tr {
 
 .displayMessages:hover {
 	display: inline-block;
-	margin-left: 5px;
 	height: 55px;
 	width: 85px;
 	background-image: url('../images/envelope-hover.jpg');
@@ -312,7 +308,6 @@ tr {
 
 .displayPhotos {
 	display: inline-block;
-	margin-left: 5px;
 	height: 55px;
 	width: 65px;
 	background-image: url('../images/camera.png');
@@ -334,7 +329,6 @@ tr {
 
 .displayMacMonitor {
 	display: inline-block;
-	margin-left: 5px;
 	height: 55px;
 	width: 65px;
 	background-image: url('../images/turtle.png');
